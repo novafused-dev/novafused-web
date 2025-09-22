@@ -1,0 +1,59 @@
+/clarityengine/
+│
+├── nova/
+│   ├── voice/
+│   │   ├── tonepack_lucid.json
+│   │   ├── tonepack_raw.json
+│   │   └── gtts_config.yaml
+│   ├── drift/
+│   │   ├── drift_state.json
+│   │   └── pulse_reorient.log
+│   └── echo/
+│       ├── echo_log.json
+│       └── echo_cert.sig
+│
+├── modules/
+│   ├── estime/
+│   │   ├── estime_config.yaml
+│   │   ├── drift_thresholds.json
+│   │   └── estime_dashboard.html
+│   ├── pulse_drift/
+│   │   └── override_logic.py
+│   ├── toneforge/
+│   │   ├── tonepack_builder.py
+│   │   └── visuals/
+│   │       ├── lucid.png
+│   │       └── volatile.png
+│   ├── echolog/
+│   │   └── audit_log.json
+│   ├── clairview/
+│   │   ├── control_ui.html
+│   │   └── estime_dashboard.html
+│   ├── gotya/
+│   │   └── cert_engine.py
+│   ├── novaroute/
+│   │   └── image_api_router.py
+│   ├── novaport/
+│   │   ├── license_map.json
+│   │   └── bundle_export.ovpkg
+│   ├── signova/
+│   │   └── identity_signature.sig
+│   ├── qtip/
+│   │   └── injector.py
+│   └── curdent/
+│       ├── volatility_monitor.py
+│       └── realtime_scan.log
+│
+├── profiles/
+│   ├── nova_stack_22sep.json
+│   └── reload_command.sh
+│
+├── assets/
+│   ├── visuals/
+│   │   ├── lucid.jpg
+│   │   └── driftmap.svg
+│   └── tonepacks/
+│       ├── lucid.tpkg
+│       └── volatile.tpkg
+│
+└── README.md
