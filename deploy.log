@@ -43,3 +43,58 @@ To https://github.com/novafused-dev/NovaFused-web.git
 fatal: not in a git directory
 fatal: not in a git directory
 Modifications locales détectées, commit automatique...
+[main 38af9a4] Auto commit before rebase
+ 41 files changed, 8008 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 backend/server.js
+ create mode 100644 frontend/.gitignore
+ create mode 100644 frontend/README.md
+ create mode 100644 frontend/eslint.config.js
+ create mode 100644 frontend/index.html
+ create mode 100644 frontend/novafused-front/.gitignore
+ create mode 100644 frontend/novafused-front/README.md
+ create mode 100644 frontend/novafused-front/eslint.config.js
+ create mode 100644 frontend/novafused-front/index.html
+ create mode 100644 frontend/novafused-front/package-lock.json
+ create mode 100644 frontend/novafused-front/package.json
+ create mode 100644 frontend/novafused-front/public/vite.svg
+ create mode 100644 frontend/novafused-front/src/App.css
+ create mode 100644 frontend/novafused-front/src/App.jsx
+ create mode 100644 frontend/novafused-front/src/assets/react.svg
+ create mode 100644 frontend/novafused-front/src/index.css
+ create mode 100644 frontend/novafused-front/src/main.jsx
+ create mode 100644 frontend/novafused-front/vite.config.js
+ create mode 100644 frontend/package-lock.json
+ create mode 100644 frontend/package.json
+ create mode 100644 frontend/public/vite.svg
+ create mode 100644 frontend/src/App.css
+ create mode 100644 frontend/src/App.jsx
+ create mode 100644 frontend/src/assets/react.svg
+ create mode 100644 frontend/src/frontend/.gitignore
+ create mode 100644 frontend/src/frontend/index.html
+ create mode 100644 frontend/src/frontend/package-lock.json
+ create mode 100644 frontend/src/frontend/package.json
+ create mode 100644 frontend/src/frontend/public/vite.svg
+ create mode 100644 frontend/src/frontend/src/app.css
+ create mode 100644 frontend/src/frontend/src/app.jsx
+ create mode 100644 frontend/src/frontend/src/assets/preact.svg
+ create mode 100644 frontend/src/frontend/src/index.css
+ create mode 100644 frontend/src/frontend/src/main.jsx
+ create mode 100644 frontend/src/frontend/vite.config.js
+ create mode 100644 frontend/src/index.css
+ create mode 100644 frontend/src/main.jsx
+ create mode 100644 frontend/vite.config.js
+ create mode 100644 public/index.html
+Pull avec rebase...
+error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+Push vers GitHub...
+remote: This repository moved. Please use the new location:        
+remote:   https://github.com/novafused-dev/novafused-web.git        
+To https://github.com/novafused-dev/NovaFused-web.git
+   2bfd606..38af9a4  main -> main
+=== Déploiement terminé avec succès ===
+=== Déploiement lancé à 2025-09-23 16:00:32 ===
+fatal: not in a git directory
+fatal: not in a git directory
+Modifications locales détectées, commit automatique...
