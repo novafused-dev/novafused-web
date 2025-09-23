@@ -1,36 +1,37 @@
-REPO_URL="git@github.com:novafused-dev/NovaFused-web.git"
-BRANCH="main"
-COMMIT_MSG="Auto deploy: $(date '+%Y-%m-%d %H:%M:%S')"
+#!/data/data/com.termux/files/usr/bin/bash
 
- if [ ! -d .git ]; then
-   git init
-     git remote add origin $REPO_URL
-     fi
+# 📁 Variables
+ REPO_URL="https://github.com/novafused-dev/NovaFused-web.git"
+ BRANCH="main"
+ LOG="$HOME/NovaFused-web/deploy.log"
 
-     git add .
-     git commit -m "$COMMIT_MSG"
-     git push -u origin $BRANCH
+ # 🕒 Timestamp
+ echo "=== Déploiement lancé à $(date '+%Y-%m-%d %H:%M:%S') ===" >> "$LOG"
 
-LOG="$HOME/NovaFused-web/deploy.log"
-echo "=== Déploiement lancé à $(date) ===" >> "$LOG"
+ # 👤 Configuration Git locale
+ git config user.name "NovaFused"
+ git config user.email "admin@novafused.dev"
 
-REPO_URL="git@github.com:VOTRE_UTILISATEUR/NovaFused-web.git"
-BRANCH="main"
-COMMIT_MSG="Auto deploy: $(date '+%Y-%m-%d %H:%M:%S')"
+ # 📍 Se placer dans le dossier du projet
+ cd "$HOME/NovaFused-web" || {
+   echo "Erreur : dossier NovaFused-web introuvable." >> "$LOG"
+     exit 1
+     }
 
-if [ ! -d .git ]; then
-	  echo "Initialisation du dépôt..." >> "$LOG"
-	    git init >> "$LOG" 2>&1
-	      git remote add origin $REPO_URL >> "$LOG" 2>&1
-fi
+     # 🧠 Vérifier les changements locaux
+     if ! git diff --quiet || ! git diff --cached --quiet; then
+       echo "Modifications locales détectées, commit automatique..." >> "$LOG"
+         git add . >> "$LOG" 2>&1
+           git commit -m "Auto commit before rebase" >> "$LOG" 2>&1
+           fi
 
-echo "Ajout des fichiers..." >> "$LOG"
-git add . >> "$LOG" 2>&1
+           # 🔄 Synchronisation avec le dépôt distant
+           echo "Pull avec rebase..." >> "$LOG"
+           git pull origin "$BRANCH" --rebase >> "$LOG" 2>&1
 
-echo "Commit en cours..." >> "$LOG"
-git commit -m "$COMMIT_MSG" >> "$LOG" 2>&1
+           # 🚀 Push vers GitHub
+           echo "Push vers GitHub..." >> "$LOG"
+           git push origin "$BRANCH" >> "$LOG" 2>&1
 
-echo "Push vers GitHub..." >> "$LOG"
-git push -u origin $BRANCH >> "$LOG" 2>&1
-
-echo "=== Fin du déploiement ===" >> "$LOG"
+           # ✅ Fin
+           echo "=== Déploiement terminé avec succès ===" >> "$LOG"

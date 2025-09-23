@@ -24,3 +24,7 @@ hint: the same ref. If you want to integrate the remote changes, use
 hint: 'git pull' before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 === Fin du déploiement ===
+/data/data/com.termux/files/usr/bin/sh: 1: /data/data/com.termux/files/home/NovaFused-web/deploy.sh: not found
+/data/data/com.termux/files/usr/bin/sh: 1: /data/data/com.termux/files/home/NovaFused-web/deploy.sh: Permission denied
+=== Déploiement lancé à 2025-09-23 14:11:00 ===
+Modifications locales détectées, commit automatique...
