@@ -28,3 +28,18 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 /data/data/com.termux/files/usr/bin/sh: 1: /data/data/com.termux/files/home/NovaFused-web/deploy.sh: Permission denied
 === Déploiement lancé à 2025-09-23 14:11:00 ===
 Modifications locales détectées, commit automatique...
+[main 2bfd606] Auto commit before rebase
+ 2 files changed, 41 insertions(+), 36 deletions(-)
+Pull avec rebase...
+error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+Push vers GitHub...
+remote: This repository moved. Please use the new location:        
+remote:   https://github.com/novafused-dev/novafused-web.git        
+To https://github.com/novafused-dev/NovaFused-web.git
+   5938a5b..2bfd606  main -> main
+=== Déploiement terminé avec succès ===
+=== Déploiement lancé à 2025-09-23 15:00:00 ===
+fatal: not in a git directory
+fatal: not in a git directory
+Modifications locales détectées, commit automatique...
