@@ -775,3 +775,15 @@ Everything up-to-date
 fatal: not in a git directory
 fatal: not in a git directory
 Modifications locales détectées, commit automatique...
+[gh-pages 8040652] Auto commit before rebase
+ 1 file changed, 12 insertions(+)
+Pull avec rebase...
+error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+Push vers GitHub...
+Everything up-to-date
+=== Déploiement terminé avec succès ===
+=== Déploiement lancé à 2025-09-23 20:00:01 ===
+fatal: not in a git directory
+fatal: not in a git directory
+Modifications locales détectées, commit automatique...
