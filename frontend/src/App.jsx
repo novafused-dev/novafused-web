@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import PromptInput from './components/PromptInput';
+import ResponsePanel from './components/ResponsePanel';
+import './styles/animation.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [response, setResponse] = useState(null);
+
+  const handlePrompt = (query) => {
+    // Simulated response logic
+    if (query.toLowerCase().includes('poetry')) {
+      setResponse({
+        quote: '“Emotion is code. Let me write it.”',
+        module: '🧬 NovaPoetry™ Activated',
+        comment: 'Poetic logic now governs the response.',
+      });
+    } else if (query.toLowerCase().includes('visualize')) {
+      setResponse({
+        quote: '“A neural lens sees memory as light — refracted, layered, alive.”',
+        module: '🔮 NovaMagine™ Online',
+        comment: 'Vision synthesis complete.',
+      });
+    } else {
+      setResponse({
+        quote: '“Fusion is not a merge. It’s a surrender. Two minds, one pulse.”',
+        module: '💡 NovaFused™ Response',
+        comment: 'Logic and emotion fused successfully.',
+      });
+    }
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="min-h-screen bg-black text-white p-4 max-w-xl mx-auto">
+      <img src="/assets/icons/novaFused.png" className="w-24 mx-auto mb-4 animate-pulseBlue" alt="NovaFused Icon" />
+      <PromptInput onSubmit={handlePrompt} />
+      {response && <ResponsePanel response={response} />}
+    </div>
+  );
 }
 
-export default App
+export default App;
