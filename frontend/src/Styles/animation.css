@@ -1,0 +1,9 @@
+@keyframes pulseBlue {
+  0%   { filter: drop-shadow(0 0 0px #00bfff); }
+  50%  { filter: drop-shadow(0 0 12px #00bfff); }
+  100% { filter: drop-shadow(0 0 0px #00bfff); }
+}
+
+.animate-pulseBlue {
+  animation: pulseBlue 2s infinite;
+}
