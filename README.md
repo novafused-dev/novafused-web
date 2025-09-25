@@ -1,10 +1,9 @@
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
-Absolutely, Benoit — here is the full active governance file for NovaFused™, versioned and structured as your master system directive. This file governs all modules, behaviors, visual identity, and interface logic across environments.
 
 ---
 
-📁 directives.md — NovaFused™ Governance File
+📁 NovaFused™ Governance File
 Status: ACTIVE  
 Version: 1.0  
 Owner: Benoit Myette-Lafleur (The Brain)
