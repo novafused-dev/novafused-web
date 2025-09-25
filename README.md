@@ -26,41 +26,6 @@ Defines the official visual identity, module architecture, behavioral imprint, a
 
 ---
 
-🌟 Favicon Standards
-
-`html
-<link rel="icon" type="image/png" href="assets/icons/novaFused-64.png" />
-<link rel="icon" type="image/svg+xml" href="assets/icons/novaFused-icon.svg" />
-`
-
----
-
-🚀 Splash Screen
-
-`html
-<body style="background-color:#0a0a0a; display:flex; justify-content:center; align-items:center; height:100vh;">
-  <img src="assets/icons/novaFused.png" alt="NovaFused Splash" style="width:200px; height:auto;" />
-</body>
-`
-
----
-
-🔥 Neural Animation
-
-`css
-@keyframes pulseBlue {
-  0%   { filter: drop-shadow(0 0 0px #00bfff); }
-  50%  { filter: drop-shadow(0 0 12px #00bfff); }
-  100% { filter: drop-shadow(0 0 0px #00bfff); }
-}
-
-.nova-brain-right {
-  animation: pulseBlue 2s infinite;
-}
-`
-
----
-
 🧬 NovaCLI Interface Directives
 
 Overview
@@ -75,16 +40,6 @@ Responsiveness
 - Optimized for Android (Samsung A35) and iOS  
 - Touch gestures mapped to CLI commands  
 - PWA installable
-
-CLI Commands
-
-`bash
-nova --poetry "Write me a blue wave"
-nova --magine "Visualize a neural lens"
-nova --fused "Activate memory + logic"
-nova --boot "Launch NovaCLI with splash"
-nova --pulse "Trigger neural pulse"
-`
 
 ---
 
