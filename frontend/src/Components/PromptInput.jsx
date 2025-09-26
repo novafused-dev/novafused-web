@@ -1,14 +1,18 @@
 import { useState } from 'react';
 
 export default function PromptInput({ onSubmit }) {
-  const [query, setQuery] = useState('');
-
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter' && query.trim()) {
-      onSubmit(query);
-      setQuery('');
-    }
-  };
+  return (
+    <form
+      onSubmit={e => {
+        e.preventDefault();
+        const value = e.target.elements.prompt.value;
+        onSubmit(value);
+      }}
+    >
+      <input name="prompt" type="text" placeholder="Type your prompt..." />
+      <button type="submit">Send</button>
+    </form>
+  );
 
   return (
     <div className="bg-black text-green-400 font-mono p-4">
@@ -25,3 +29,6 @@ export default function PromptInput({ onSubmit }) {
     </div>
   );
 }
+
+
+// frontend/src/components/PromptInput.jsx
